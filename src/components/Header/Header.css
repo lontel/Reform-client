@@ -1,0 +1,50 @@
+.logo-container {
+    margin: 2% 0 2% 0;
+}
+
+.logo-container img {
+    width: 10%;
+}
+
+.navbar-container {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+}
+
+span.nav-link {
+    color: #00558c;
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+span.nav-link:hover {
+    color: #f0bc38;
+    font-size: 1.5rem;
+}
+
+#basic-nav-dropdown{
+    color: #00558c;
+    font-size: 1.5rem;
+}
+
+#basic-nav-dropdown:hover {
+    color: #f0bc38;
+    font-size: 1.5rem;
+}
+
+a.dropdown-item {
+    color: #00558c;
+    font-size: 1rem;
+}
+
+a.dropdown-item:hover {
+    color: #f0bc38;
+    font-size: 1rem;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
