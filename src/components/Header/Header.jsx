@@ -10,19 +10,14 @@ import logo from '../../resources/logo.jpeg'
 
 const Header = () => {
   return (
-    <div className='navbar-container'>
-     
-        <Container className='logo-container'>
-          <Navbar.Brand href="/"><Image src={logo} alt='logo'/></Navbar.Brand>
-        </Container>
-      <Container className='navigation'>
-        <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <Nav.Link as="span" href="/Inicio">Inicio</Nav.Link>
+    <div className="container">
+      <Navbar.Brand href="/"><Image src={logo} alt='logo'/></Navbar.Brand>
+      <Navbar expand="sm">
+        <Container>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/" as="span">Inicio</Nav.Link>
               <NavDropdown title="Proyectos" id="basic-nav-dropdown">
                 <NavDropdown.Item  href="/">Cocinas</NavDropdown.Item>
                 <NavDropdown.Item href="/">Baños</NavDropdown.Item>
@@ -31,10 +26,11 @@ const Header = () => {
               </NavDropdown>
               <Nav.Link as="span" href="/">Conócenos</Nav.Link>
               <Nav.Link as="span" href="/">Contacto</Nav.Link>
-            </div>
-          </div>
-        </nav>
-      </Container>
+              <Nav.Link as="span" href="/">Inicio Sesión</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
     )
   }
