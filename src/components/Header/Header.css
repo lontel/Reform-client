@@ -1,5 +1,5 @@
 .container img {
-    width: 15%;
+    width: 13%;
 }
 
 .container {
@@ -9,13 +9,13 @@
     padding: 3% 0 3% 0;
 }
 
-span.nav-link {
+a.nav-link {
     color: #00558c;
     font-size: 1.3rem;
     margin: 1rem;
 }
 
-span.nav-link:hover {
+a.nav-link:hover {
     color: #f0bc38;
     font-size: 1.5rem;
 }
@@ -33,12 +33,10 @@ span.nav-link:hover {
 
 a.dropdown-item {
     color: #00558c;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 a.dropdown-item:hover {
     color: #f0bc38;
     font-size: 1rem;
 }
-
-

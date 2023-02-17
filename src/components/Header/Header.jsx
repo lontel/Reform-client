@@ -17,16 +17,16 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/" as="span">Inicio</Nav.Link>
+              <Nav.Link href="/">Inicio</Nav.Link>
               <NavDropdown title="Proyectos" id="basic-nav-dropdown">
                 <NavDropdown.Item  href="/">Cocinas</NavDropdown.Item>
                 <NavDropdown.Item href="/">Baños</NavDropdown.Item>
                 <NavDropdown.Item href="/">Dormitorios</NavDropdown.Item>
                 <NavDropdown.Item href="/">Terrazas y Balcones</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as="span" href="/">Conócenos</Nav.Link>
-              <Nav.Link as="span" href="/">Contacto</Nav.Link>
-              <Nav.Link as="span" href="/">Inicio Sesión</Nav.Link>
+              <Nav.Link href="/about">Conócenos</Nav.Link>
+              <Nav.Link href="/">Contacto</Nav.Link>
+              <Nav.Link href="/register">Inicio Sesión</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
