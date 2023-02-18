@@ -1,0 +1,22 @@
+h2{
+    color: #00558c;
+}
+
+label {
+    color: #00558c;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 2%;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0 1% 0;
+}

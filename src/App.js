@@ -2,6 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header/Header'
 import AppRoutes from './routes/AppRoutes'
+import Message from './components/Message/Message'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <AppRoutes />
+      <Message />
     </div>
   )
 }
