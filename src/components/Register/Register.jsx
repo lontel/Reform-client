@@ -19,7 +19,7 @@ const Register = () => {
         password: ''
     })
 
-    const [isLoading, setIsLoading] = useState(false)
+    // const [isLoading, setIsLoading] = useState(false)
 
     const { setShowMessage } = useContext(MessageContext)
 
@@ -37,7 +37,7 @@ const Register = () => {
             .register(registerData)
             .then(({ data }) => {
                 setShowMessage({
-                    show: true, title: `Welcome, ${data.createdUser.firstName}`, text: 'You have successfully registered'
+                    show: true, title: `Welcome, ${data.createdUser.firstName} ${data.createdUser.lastName}`, text: 'You have successfully registered'
                 })
                 navigate('/signin')
             })

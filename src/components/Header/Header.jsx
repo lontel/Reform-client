@@ -23,7 +23,7 @@ const Header = () => {
     }
 
   return (
-    <div className="container">
+    <div className="header-container">
       <Navbar.Brand href="/"><Image src={logo} alt='logo'/></Navbar.Brand>
       <Navbar expand="sm">
         <Container className='header-container'>
@@ -32,18 +32,24 @@ const Header = () => {
             <Nav className="me-auto">
               <Nav.Link href="/">Inicio</Nav.Link>
               <NavDropdown title="Proyectos" id="basic-nav-dropdown">
-                <NavDropdown.Item  href="/">Cocinas</NavDropdown.Item>
-                <NavDropdown.Item href="/">Baños</NavDropdown.Item>
-                <NavDropdown.Item href="/">Dormitorios</NavDropdown.Item>
-                <NavDropdown.Item href="/">Terrazas y Balcones</NavDropdown.Item>
+                <NavDropdown.Item  href="/kitchens">Cocinas</NavDropdown.Item>
+                <NavDropdown.Item href="/bathrooms">Baños</NavDropdown.Item>
+                <NavDropdown.Item href="/badrooms">Dormitorios</NavDropdown.Item>
+                <NavDropdown.Item href="/terrace">Terrazas y Balcones</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/about">Conócenos</Nav.Link>
               <Nav.Link href="/">Contacto</Nav.Link>
               {
                 user ?
-                <Link to="/signin">
-                  <Nav.Link as="span" onClick={logout} >Logout</Nav.Link>
-                </Link>
+                <>
+                  <Link to="/my-account">
+                    <Nav.Link as="span" >Mi cuenta</Nav.Link>
+                  </Link>
+                  <Link to="/signin">
+                    <Nav.Link as="span" onClick={logout} >Cerrar sesión</Nav.Link>
+                  </Link>
+                </>
+                
                 :
                 <Nav.Link href="/signin">Iniciar Sesión</Nav.Link>
               }
