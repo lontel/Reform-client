@@ -2,7 +2,7 @@ import "./WorksCard.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import workService from "../../../services/work.services";
-import { Nav } from "react-bootstrap";
+import { Col, Container, Nav, Row } from "react-bootstrap";
 
 const WorksCard = ({ props, user, loadWorks }) => {
   const shortDescription = `${props.description.slice(0, 100)}...`;
@@ -16,20 +16,34 @@ const WorksCard = ({ props, user, loadWorks }) => {
 
   return (
     <>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", height: "30rem" }}>
         <Card.Img className="card-pic" variant="top" src={props.images[0]} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text> {shortDescription} </Card.Text>
-          <Button variant="dark">Ver detalles</Button>
-          {user?.role === "admin" && (
-            <Button onClick={deleteWork} variant="danger">
-              Borrar
-            </Button>
-          )}
-          {user?.role === "admin" && (
-            <Nav.Link href={`/works-edit/${props._id}`}>Editar</Nav.Link>
-          )}
+          <Card.Text className="mb-5"> {shortDescription} </Card.Text>
+          <Container>
+            <Row>
+              <Col>
+                <Button className="m-1" variant="dark">
+                  Ver detalles
+                </Button>
+                {user?.role === "admin" && (
+                  <Button className="m-1" onClick={deleteWork} variant="danger">
+                    Borrar
+                  </Button>
+                )}
+                {user?.role === "admin" && (
+                  <Nav.Link
+                    as={Button}
+                    variant="warning"
+                    href={`/works-edit/${props._id}`}
+                  >
+                    Editar
+                  </Nav.Link>
+                )}
+              </Col>
+            </Row>
+          </Container>
         </Card.Body>
       </Card>
     </>
@@ -37,4 +51,3 @@ const WorksCard = ({ props, user, loadWorks }) => {
 };
 
 export default WorksCard;
-// <Button  variant="warning">Editar</Button>
