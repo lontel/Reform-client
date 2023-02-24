@@ -8,16 +8,16 @@ class WorkService {
             baseURL: `${process.env.REACT_APP_API_URL}/api/work`
         })
 
-        // this.api.interceptors.request.use((config) => {
+        this.api.interceptors.request.use((config) => {
 
-        //     const storedToken = localStorage.getItem("authToken");
+            const storedToken = localStorage.getItem("authToken");
 
-        //     if (storedToken) {
-        //         config.headers = { Authorization: `Bearer ${storedToken}` }
-        //     }
+            if (storedToken) {
+                config.headers = { Authorization: `Bearer ${storedToken}` }
+            }
 
-        //     return config
-        // })
+            return config
+        })
     }
 
 

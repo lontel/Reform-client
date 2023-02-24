@@ -18,8 +18,8 @@ const Footer = () => {
               <div className="icon">
                 <ContactsIcon />
                 <div className="nfo">
-                  <div>Dirección:</div>
-                  <div>C/ Noria 8</div>
+                  <div>Área de servicio:</div>
+                  <div>Alcalá de Henares</div>
                 </div>
               </div>
 
@@ -27,7 +27,7 @@ const Footer = () => {
                 <PhoneIcon />
                 <div className="nfo">
                   <div>Teléfono:</div>
-                  <div>34 66 666 6666</div>
+                  <div>34 642 85 10 24</div>
                 </div>
               </div>
             </div>

@@ -11,6 +11,7 @@ import { AuthContext } from "../../contexts/auth.contexts";
 import { useContext, useEffect, useState } from "react";
 import workService from "../../services/work.services";
 import WorksCard from "../../components/Works/WorksCard/WorksCard";
+import MyCarousel from "../../components/Carousel/Carousel";
 
 const HomePage = () => {
   const { user } = useContext(AuthContext);
@@ -44,6 +45,7 @@ const HomePage = () => {
           <ReactPlayer url={video} playing={true} volume={0.2} />
         </Row>
         <h4 className="h4">Construye tus sueños, renueva tus espacios</h4>
+        <MyCarousel workData={workData} />
         <Row className="pic">
           <Image src={imgOne} />
           <Image src={imgTwo} />

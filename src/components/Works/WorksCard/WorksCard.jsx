@@ -3,9 +3,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import workService from "../../../services/work.services";
 import { Col, Container, Nav, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const WorksCard = ({ props, user, loadWorks }) => {
-  const shortDescription = `${props.description.slice(0, 100)}...`;
+  const shortDescription = `${props.description.slice(0, 60)}...`;
+  const navigation = useNavigate();
 
   const deleteWork = () => {
     workService
@@ -14,6 +16,9 @@ const WorksCard = ({ props, user, loadWorks }) => {
       .catch((err) => console.error(err));
   };
 
+  const goToDetails = () => {
+    navigation(`/details/${props._id}`);
+  };
   return (
     <>
       <Card style={{ width: "18rem", height: "30rem" }}>
@@ -24,7 +29,7 @@ const WorksCard = ({ props, user, loadWorks }) => {
           <Container>
             <Row>
               <Col>
-                <Button className="m-1" variant="dark">
+                <Button onClick={goToDetails} className="m-1" variant="dark">
                   Ver detalles
                 </Button>
                 {user?.role === "admin" && (

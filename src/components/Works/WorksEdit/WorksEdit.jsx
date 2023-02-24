@@ -58,7 +58,7 @@ const WorksEdit = () => {
       .catch((err) => console.log(err));
   };
 
-  const { title, description, images, category } = editData;
+  const { title, description, category } = editData;
 
   return (
     <Container className="work-container">

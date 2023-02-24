@@ -1,9 +1,10 @@
 .bck_b_dark {
-    background: #272723;
+    background: #262327;
 }
 .footer-container {
     width: 80%;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 footer .logo {
@@ -41,7 +42,7 @@ footer .logo {
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 

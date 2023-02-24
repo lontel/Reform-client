@@ -10,6 +10,7 @@ import Bathrooms from "../pages/Categories/Bathrooms/Bathrooms";
 import Kitchens from "../pages/Categories/Kitchens/Kitchens";
 import Terrace from "../pages/Categories/Terrace/Terrace";
 import WorksEdit from "../components/Works/WorksEdit/WorksEdit";
+import WorkDetails from "../components/Works/WorksDetails/WorkDetails";
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/bathrooms" element={<Bathrooms />} />
       <Route path="/kitchens" element={<Kitchens />} />
       <Route path="/terrace" element={<Terrace />} />
+      <Route path="/details/:work_id" element={<WorkDetails />} />
     </Routes>
   );
 };
